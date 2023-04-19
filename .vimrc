@@ -3,6 +3,7 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
+set encoding=utf-8
 
 " Add numbers to each line on the left-hand side
 "
@@ -31,11 +32,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
-
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']          " using Vim
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']          " using Vim
 
 " }}}
 "
