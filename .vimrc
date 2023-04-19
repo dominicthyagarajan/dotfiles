@@ -17,7 +17,7 @@ set cursorcolumn
 "
 set wildmenu
 
-" Make wildmenu behavie like Bash completion 
+" Make wildmenu behaviour like Bash completion 
 
 set wildmode=list:longest
 
