@@ -33,6 +33,7 @@ Plug 'lervag/vimtex'
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'ckunte/latex-snippets-vim', {'tag': '*'}
 
 call plug#end()
 
