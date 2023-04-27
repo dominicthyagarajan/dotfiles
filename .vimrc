@@ -10,7 +10,8 @@ set encoding=utf-8
  set number
 " Highlight cursor line underneath the cursor horizontally
 " Hightlight cursor line underneath the cursor vertically
-"
+" Change the highlight for matchparenthesisis in tex files
+autocmd filetype tex highlight MatchParen ctermbg=lightyellow ctermfg=black
 set cursorline
 set cursorcolumn
 
