@@ -1,4 +1,4 @@
-" Turn syntax highlighting on 
+" Turn synax highlighting on 
 filetype on
 filetype plugin on
 filetype indent on
@@ -142,6 +142,8 @@ let g:mkdp_filetypes = ['markdown']
 " By default the theme is define according to the preferences of the system
 let g:mkdp_theme = 'dark'
 Plug 'conornewton/vim-pandoc-markdown-preview'
+
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']          " using Vim
@@ -161,7 +163,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward
 "
 " }}}
 " 
-Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
