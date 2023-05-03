@@ -161,8 +161,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward
 "
 " }}}
 " 
-
-
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
