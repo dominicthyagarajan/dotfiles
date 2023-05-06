@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/dominic'
+let g:netrw_dirhist_3='/home/dominic/MSTeams Diagnostics Log 01_04_2022__17_15_01'
+let g:netrw_dirhist_2='/home/dominic'
 let g:netrw_dirhist_1='/etc/autofs'
