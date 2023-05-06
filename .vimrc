@@ -1,10 +1,9 @@
-" Turn synax highlighting on 
+" Turn synax highlighting on
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
 set encoding=utf-8
-
 " Add numbers to each line on the left-hand side
 "
  set number
@@ -17,20 +16,25 @@ set cursorcolumn
 
 " Enable autocompletion menu after pressing TAB
 "
+set hls
+set ic
 set wildmenu
 " color scheme
 " Make wildmenu behaviour like Bash completion 
 
 set wildmode=list:longest
-
+set spelllang=en_us,en_au
+set spell
 "Wildmenu ignore files"
-"
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-"j PLUGINS ---------------------------------------------------------------- {{{
+" PLUGINS ---------------------------------------------------------------- {{{
 call plug#begin('~/.vim/plugged')
-
-
-Plug 'lervag/vimtex'
+Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'junegunn/goyo.vim'
     let g:tex_flavor='latex'
     let g:vimtex_view_method='zathura'
     let g:vimtex_quickfix_mode=1
@@ -38,6 +42,9 @@ Plug 'KeitaNakamura/tex-conceal.vim'
     set conceallevel=1
     let g:tex_conceal='abdmg'
     hi Conceal ctermbg=none
+Plug 'jalvesaq/zotcite'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -45,13 +52,12 @@ Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
-let g:mkdp_auto_start = 0
+let g:mkdp_auto_start = 1
 
 " set to 1, the nvim will auto close current preview window when change
 " from markdown buffer to another buffer
 " default: 1
 let g:mkdp_auto_close = 1
-
 " set to 1, the vim will refresh markdown when save the buffer or
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
 " move the cursor
@@ -118,7 +124,7 @@ let g:mkdp_preview_options = {
     \ 'disable_filename': 0,
     \ 'toc': {}
     \ }
-
+let g:markdown_folding = 1 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
 let g:mkdp_markdown_css = ''
@@ -144,6 +150,7 @@ let g:mkdp_theme = 'dark'
 Plug 'conornewton/vim-pandoc-markdown-preview'
 
 Plug 'vim-pandoc/vim-pandoc-syntax'
+
 call plug#end()
 
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']          " using Vim
