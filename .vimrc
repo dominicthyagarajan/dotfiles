@@ -137,6 +137,7 @@ Plug 'conornewton/vim-pandoc-markdown-preview'
     	let g:tex_flavor='latex'
     	let g:vimtex_view_method='zathura'
     	let g:vimtex_quickfix_mode=1
+	let g:md_args= "-F zotref.py --citeproc"
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
