@@ -137,7 +137,7 @@ Plug 'conornewton/vim-pandoc-markdown-preview'
     	let g:tex_flavor='latex'
     	let g:vimtex_view_method='zathura'
     	let g:vimtex_quickfix_mode=1
-	let g:md_args= "-F zotref.py --citeproc"
+	let g:md_args= "--template eisvogel --listing -F zotref.py --citeproc "
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
@@ -155,6 +155,20 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " More Vimscripts code goes here.
+"Twiddle case using the tilde in visually selected text
+function! TwiddleCase(str)
+  if a:str ==# toupper(a:str)
+    let result = tolower(a:str)
+  elseif a:str ==# tolower(a:str)
+    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+  else
+    let result = toupper(a:str)
+  endif
+  return result
+endfunction
+vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+"
+
 " }}}
 " STATUS LINE -------------------------------------------------{{
 " Status bar code goes here.
