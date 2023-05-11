@@ -1,4 +1,4 @@
-" Turn synax highlighting on
+" Turn syntax  highlighting on
 filetype on
 filetype plugin on
 filetype indent on
@@ -7,7 +7,7 @@ set encoding=utf-8
 " Add numbers to each line on the left-hand side
  set number
 " Highlight cursor line underneath the cursor horizontally
-" Hightlight cursor line underneath the cursor vertically
+" Highlight  cursor line underneath the cursor vertically
 " Change the highlight for matchparenthesisis in tex files
 autocmd filetype tex highlight MatchParen ctermbg=lightyellow ctermfg=black
 set cursorline
@@ -21,6 +21,10 @@ set wildmenu
 set wildmode=list:longest
 set spelllang=en_us,en_au
 set spell
+" highlight color for spelling 
+ hi SpellBad ctermfg=255  ctermbg =160 
+ hi SpellRare ctermfg=255 ctermbg = 001
+ hi SpellLocal ctermfg=255 ctermbg = 001
 "Wildmenu ignore files"
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " PLUGINS ----------------------------------------------------- {{{
@@ -42,7 +46,6 @@ Plug 'preservim/vim-markdown'
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
 	let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']          " using Vim
-
 	let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 	let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 	let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
