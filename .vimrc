@@ -30,6 +30,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " PLUGINS ----------------------------------------------------- {{{
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 	let g:airline#extensions#tabline#enabled = 1
 Plug 'airblade/vim-gitgutter'
