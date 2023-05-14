@@ -138,10 +138,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	" By default the theme is define according to the preferences of the system
 	let g:mkdp_theme = 'dark'
 Plug 'conornewton/vim-pandoc-markdown-preview'
-    	let g:tex_flavor='latex'
+    	let g:tex_flavor='pdflatex'
     	let g:vimtex_view_method='zathura'
     	let g:vimtex_quickfix_mode=1
-	let g:md_args= "--template eisvogel --listing -F zotref.py --citeproc "
+	let g:md_args= "--filter pandoc-crossref --template eisvogel --listing  -F zotref.py --citeproc "
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
