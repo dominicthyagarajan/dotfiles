@@ -3,6 +3,7 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
+set hidden
 set encoding=utf-8
 " Add numbers to each line on the left-hand side
  set number
@@ -31,6 +32,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 	let g:airline#extensions#tabline#enabled = 1
 Plug 'airblade/vim-gitgutter'
@@ -150,6 +152,7 @@ call plug#end()
 " Mappings code goes here.
 inoremap jk <esc>
 inoremap kj <esc>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 " }}}
 " VIMSCRIPT ---------------------------------------------------{{
 " This will enable code folding.
