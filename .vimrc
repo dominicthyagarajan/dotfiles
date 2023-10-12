@@ -48,10 +48,11 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'tpope/vim-dispatch'
 Plug 'SirVer/ultisnips'
-	let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']          " using Vim
+	let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips', '/.vim/mysnippets']          " using Vim
 	let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 	let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 	let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
