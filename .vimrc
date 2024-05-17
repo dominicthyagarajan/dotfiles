@@ -141,9 +141,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	let g:mkdp_theme = 'dark'
 Plug 'conornewton/vim-pandoc-markdown-preview'
     	let g:tex_flavor='pdflatex'
-    	let g:vimtex_view_method='zathura'
+    	let g:vimtex_view_method='atril'
     	let g:vimtex_quickfix_mode=1
-	let g:md_args= "--filter pandoc-crossref --template eisvogel --listing  -F zotref.py --citeproc "
+	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc "
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
