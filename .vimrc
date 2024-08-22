@@ -144,6 +144,7 @@ Plug 'conornewton/vim-pandoc-markdown-preview'
     	let g:vimtex_view_method='atril'
     	let g:vimtex_quickfix_mode=1
 	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc --template /usr/share/pandoc/data/templates/eisvogel.latex"
+	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc "
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
