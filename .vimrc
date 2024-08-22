@@ -42,7 +42,7 @@ Plug 'KeitaNakamura/tex-conceal.vim'
     	set conceallevel=1
     	let g:tex_conceal='abdmg'
     	hi Conceal ctermbg=none
-Plug 'jalvesaq/zotcite'
+	Plug 'jalvesaq/zotcite', {'branch': 'vim'}
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'tpope/vim-dispatch'
@@ -144,7 +144,7 @@ Plug 'conornewton/vim-pandoc-markdown-preview'
     	let g:vimtex_view_method='atril'
     	let g:vimtex_quickfix_mode=1
 	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc --template /usr/share/pandoc/data/templates/eisvogel.latex"
-	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc "
+"	let g:md_args= "--filter pandoc-crossref -F ~/.vim/plugged/zotcite/python3/zotref.py --citeproc "
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
